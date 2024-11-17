@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    margin: 0;
+    background: radial-gradient(circle at center, #415a77, #1b263b, #0d1b2a);
+    background-size: 400% 400%;
+    animation: fluidColorFlow 10s infinite;
+    color: #ffffff;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  
+  /* Content Section */
+  .content {
+    padding-top: 150px;
+    animation: fadeIn 2s;
+  }
+  
+  .content h1 {
+    font-size: 64px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff6ec7, #6a83ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .content p {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #d1d1e0; /* 밝은 회색 톤 */
+  }
+  
+  /* Menu Button */
+  .menu-btn {
+    font-family: "Inter", sans-serif;
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-btn:hover {
+    background: #6a83ff; /* 보라빛 배경 */
+    color: #ffffff;
+  }
+  
+  /* Menu List */
+  .menu-list {
+    max-height: 0; /* 초기 상태: 숨김 */
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out; /* 부드러운 확장 효과 */
+    margin-top: 20px;
+  }
+  
+  .menu-list a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-list a:hover {
+    color: #ff6ec7; /* 핑크빛 컬러 */
+  }
+  
+  /* Animations */
+  /* 유체역학적인 배경 애니메이션 */
+  @keyframes fluidColorFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
