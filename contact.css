@@ -1,62 +1,107 @@
+/* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* General Body Styling */
 body {
-    margin: 0;
-    background: radial-gradient(circle at center, #415a77, #1b263b, #0d1b2a);
-    background-size: 400% 400%;
-    animation: fluidColorFlow 10s infinite;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    text-align: center;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(circle at center, #415a77, #1b263b, #0d1b2a);
+  background-size: 400% 400%;
+  animation: fluidColorFlow 10s infinite;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+/* Menu Button Styling */
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* 버튼 수평 중앙 정렬 */
+  font-family: "Inter", sans-serif;
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.menu-btn:hover {
+  background: #6a83ff;
+  color: #ffffff;
+}
+
+/* Dropdown Menu */
+.menu-list {
+  position: absolute;
+  top: 70px; /* 버튼 아래에 위치 */
+  left: 50%;
+  transform: translateX(-50%); /* 메뉴 수평 중앙 정렬 */
+  background: transparent; /* 포트폴리오 스타일에 맞게 투명 */
+  overflow: hidden;
+  max-height: 0; /* 숨김 상태 */
+  transition: max-height 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.menu-list a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 0;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.menu-list a:hover {
+  color: #ff6ec7; /* 핑크 컬러로 변경 */
+}
+
+/* Contact Container */
+.contact-container {
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-container a {
+  display: block;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(45deg, #ff6ec7, #6a83ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.contact-container a:hover {
+  color: #ff6ec7;
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fluidColorFlow {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  /* Container Styling */
-  .contact-container {
-    max-width: 600px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .contact-container a {
-    font-family: "Inter", sans-serif;
-    margin-bottom: 10px;
-    background: linear-gradient(45deg, #ff6ec7, #6a83ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  
-  /* Email Link Styling */
-  .email-link {
-    font-size: 18px;
-    color: #6a83ff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
-  
-  .email-link:hover {
-    color: #ff6ec7;
-    text-decoration: underline;
-  }
-  
-  /* Animation */
-  @keyframes fluidColorFlow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
+}
