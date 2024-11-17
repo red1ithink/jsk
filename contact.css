@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* General Body Styling */
+body {
+    margin: 0;
+    background: radial-gradient(circle at center, #415a77, #1b263b, #0d1b2a);
+    background-size: 400% 400%;
+    animation: fluidColorFlow 10s infinite;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  /* Container Styling */
+  .contact-container {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-container a {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #ff6ec7, #6a83ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+  /* Email Link Styling */
+  .email-link {
+    font-size: 18px;
+    color: #6a83ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .email-link:hover {
+    color: #ff6ec7;
+    text-decoration: underline;
+  }
+  
+  /* Animation */
+  @keyframes fluidColorFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
