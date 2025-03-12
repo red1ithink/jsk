@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Archive</title>
+  <title>Travel</title>
   <link rel="stylesheet" href="archive.css">
   <script src="https://d3js.org/d3.v6.min.js"></script>
   <script src="https://unpkg.com/topojson@3"></script>
 </head>
 <body>
   <div class="container">
-    <h1>My Travel Archive</h1>
-    <p>Click on a country to see my travel memories!</p>
+    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+
+    <div id="menu" class="menu-list">
+      <a href="index.html">Home</a>
+      <a href="works.html">Works</a>
+      <a href="archieve.html">Archive</a>
+    </div>
+    
     <div id="map"></div>
     <div id="info-box" class="hidden">
       <h2 id="country-name"></h2>

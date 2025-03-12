@@ -40,6 +40,7 @@ p {
   width: 90%;
   height: 550px;
   margin: auto;
+  margin-top: 100px;
   border-radius: 10px;
 }
 
@@ -61,3 +62,52 @@ p {
 .hidden {
   display: none;
 }
+
+
+.menu-btn {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* 버튼 수평 중앙 정렬 */
+    font-family: "Inter", sans-serif;
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+  }
+  
+  .menu-btn:hover {
+    background: #6a83ff;
+    color: #ffffff;
+  }
+  
+  /* Dropdown Menu */
+  .menu-list {
+    position: absolute;
+    top: 70px; /* 버튼 아래에 위치 */
+    left: 50%;
+    transform: translateX(-50%); /* 메뉴 수평 중앙 정렬 */
+    background: transparent; /* 포트폴리오 스타일에 맞게 투명 */
+    overflow: hidden;
+    max-height: 0; /* 숨김 상태 */
+    transition: max-height 0.5s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .menu-list a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 0;
+    font-family: "Inter", sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-list a:hover {
+    color: #ff6ec7; /* 핑크 컬러로 변경 */
+  }
