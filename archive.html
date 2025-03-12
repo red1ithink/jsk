@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel</title>
-  <link rel="stylesheet" href="archive.css">
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="https://unpkg.com/topojson@3"></script>
-</head>
-<body>
-  <div class="container">
-    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel</title>
+    <link rel="stylesheet" href="archive.css" />
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+  </head>
+  <body>
+    <div class="container">
+      <button class="menu-btn" onclick="toggleMenu()">Menu</button>
 
-    <div id="menu" class="menu-list">
-      <a href="index.html">Home</a>
-      <a href="works.html">Works</a>
-      <a href="archieve.html">Archive</a>
+      <div id="menu" class="menu-list">
+        <a href="index.html">Home</a>
+        <a href="works.html">Works</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div id="map"></div>
+      <div id="info-box" class="hidden">
+        <h2 id="country-name"></h2>
+        <img id="country-photo" src="" alt="Travel photo" />
+        <p id="country-description"></p>
+      </div>
     </div>
-    
-    <div id="map"></div>
-    <div id="info-box" class="hidden">
-      <h2 id="country-name"></h2>
-      <img id="country-photo" src="" alt="Travel photo">
-      <p id="country-description"></p>
-    </div>
-  </div>
-  <script src="archive.js"></script>
-</body>
+    <script src="archive.js"></script>
+  </body>
 </html>
