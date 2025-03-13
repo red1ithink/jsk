@@ -1,101 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,14..32,300;1,14..32,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  background: radial-gradient(circle at center, #415a77, #1b263b, #0d1b2a);
-  background-size: 400% 400%;
-  animation: fluidColorFlow 10s infinite;
-  color: #ffffff;
-  text-align: center;
-  overflow-x: hidden;
+    margin: 0;
+    background: radial-gradient(circle at center, #415a77, #1b263b, #0d1b2a);
+    background-size: 400% 400%;
+    animation: fluidColorFlow 10s infinite;
+    color: #ffffff;
+    overflow-x: hidden;
+    text-align: center;
 }
 
-/* 배경 색상 변화 애니메이션 */
-@keyframes fluidColorFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* Content Section */
+.content {
+    padding-top: 150px;
+    animation: fadeIn 2s;
 }
 
-h1 {
-  font-size: 48px;
-  background: linear-gradient(45deg, #ff6ec7, #6a83ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.content h1 {
+    font-size: 64px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff6ec7, #6a83ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-p {
-  font-size: 20px;
-  color: #d1d1e0;
+.content p {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #d1d1e0;
 }
 
-#map {
-  width: 90%;
-  height: 550px;
-  margin: auto;
-  margin-top: 100px;
-  border-radius: 10px;
-}
-
-#info-box {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  max-width: 400px;
-  text-align: left;
-}
-
-#info-box img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.hidden {
-  display: none;
-}
-
-
-.menu-btn {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%); /* 버튼 수평 중앙 정렬 */
+  /* Menu Button */
+  .menu-btn {
     font-family: "Inter", sans-serif;
     background: transparent;
     border: 2px solid #ffffff;
     color: #ffffff;
     font-size: 18px;
     padding: 10px 20px;
+    margin-top: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    z-index: 1001;
   }
   
   .menu-btn:hover {
-    background: #6a83ff;
+    background: #6a83ff; /* 보라빛 배경 */
     color: #ffffff;
   }
   
-  /* Dropdown Menu */
+  /* Menu List */
   .menu-list {
-    position: absolute;
-    top: 70px; /* 버튼 아래에 위치 */
-    left: 50%;
-    transform: translateX(-50%); /* 메뉴 수평 중앙 정렬 */
-    background: transparent; /* 포트폴리오 스타일에 맞게 투명 */
+    max-height: 0; /* 초기 상태: 숨김 */
+    font-family: "Inter", sans-serif;
     overflow: hidden;
-    max-height: 0; /* 숨김 상태 */
-    transition: max-height 0.5s ease-in-out;
-    z-index: 1000;
+    transition: max-height 0.5s ease-in-out; /* 부드러운 확장 효과 */
+    margin-top: 20px;
   }
   
   .menu-list a {
@@ -103,11 +66,80 @@ p {
     text-decoration: none;
     color: #ffffff;
     font-size: 20px;
-    padding: 10px 0;
-    font-family: "Inter", sans-serif;
+    margin: 10px 0;
     transition: all 0.3s ease;
   }
   
   .menu-list a:hover {
-    color: #ff6ec7; /* 핑크 컬러로 변경 */
+    color: #ff6ec7; /* 핑크빛 컬러 */
   }
+
+/* 지도 스타일 */
+#map {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 550px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* 나라 정보 박스 */
+#info-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+    max-width: 400px;
+    text-align: center;
+    width: 90%;
+}
+
+#info-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* "Dive Deeper" 버튼 */
+.deep-dive-btn {
+    font-family: "Inter", sans-serif;
+    background: #ff6ec7;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.deep-dive-btn:hover {
+    background: #6a83ff;
+}
+
+/* 호버링 문제 해결 */
+.country:hover {
+    fill: #6a83ff !important;
+}
+
+/* 배경 색상 애니메이션 */
+@keyframes fluidColorFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
